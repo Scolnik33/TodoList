@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.aside {
+    width: 350px;
+    min-height: 100vh;
+    background-color: rgb(12, 12, 12);
+    position: absolute;
+    border-right: 1px rgb(20, 20, 20) solid;
+}
+.emptyAside {
+    width: 350px;
+    height: 100vh;
+    background-color: rgb(12, 12, 12);
+    position: absolute;
+    border-right: 1px rgb(20, 20, 20) solid;
+}
+.prof {
+    margin: 30px 0;
+}
+.name {
+    margin: 40px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.myView {
+    margin-bottom: 40px;
+}
+.myView_link {
+    color: white;
+    text-decoration: none;
+}
+.myView_item {
+    display: block;
+    padding: 10px 0 10px 40px;
+    cursor: pointer;
+
+    position: relative;
+}
+.myView_item:hover .view_delete {
+    opacity: 1;
+}
+.view_delete {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    z-index: 1;
+
+    opacity: 0;
+}
+.view_delete:hover {
+    color: rgb(128, 128, 128);
+}
+.myView_item:hover .view_plus {
+    opacity: 1;
+}
+.myView_item:hover {
+    background-color: rgb(24, 24, 24);
+}
+.List_item {
+    display: flex;
+    padding: 10px 0 10px 40px;
+
+    position: relative;
+    cursor: pointer;
+}
+.List_item:hover {
+    background-color: rgb(24, 24, 24);
+}
+.List_item:hover .list_delete {
+    opacity: 1;
+}
+.list_delete {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    z-index: 1;
+
+    opacity: 0;
+}
+.list_delete:hover {
+    color: rgb(128, 128, 128);
+}
+.list_link {
+    color: white;
+    text-decoration: none;
+}
+.myList_logo {
+    margin: 0 0 15px 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main {
+    width: calc(100% - 350px);
+    min-height: 100vh;
+    background-color: rgb(10, 10, 10);
+    margin-left: 350px;
+}
+.header {
+    padding: 30px 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.greet {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.motivation {
+    color: rgb(189, 189, 189);
+    font-size: 16px;
+    margin-top: 5px;
+}
+.icon_reset {
+    width: 23px;
+    height: 23px;
+    fill: white;
+    margin-bottom: 1px;
+    cursor: pointer;
+}
+.icon_search {
+    width: 25px;
+    height: 25px;
+    fill: white;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.calendar {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    position: relative;
+}
+.calendar_item {
+    padding: 50px;
+    cursor: pointer;
+    background-color: rgb(24, 24, 24);
+    border-right: 15px solid rgb(10, 10, 10);
+}
+.calendar_item:hover {
+    background-color: rgb(32, 32, 32);
+}
+.calendar_item.active {
+    background-color: rgb(44, 44, 44);
+}
+.task_list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 80px 120px 20px 120px;
+}
+.task_list_item {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 20px;
+    padding: 22px 30px;
+    background-color: rgb(29, 29, 29);
+    border-radius: 10px;
+    cursor: pointer;
+
+    position: relative;
+}
+.task_list_item:hover .trash_can, .task_list_item:hover .edit, .task_list_item:hover .add_view {
+    opacity: 1;
+}
+.task_list_item:hover .edit2 {
+    opacity: 1;
+}
+.task_list_item:hover {
+    background-color: rgb(39, 39, 39);
+}
+.tema {
+    margin-bottom: 15px;
+}
+.btn_aside {
+    font-size: 18px;
+    position: absolute;
+    left: 40px;
+    bottom: 50px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+.btn_register {
+    color: white;
+    text-decoration: none;
+    margin-top: 15px;
+    padding: 10px 20px;
+
+    transition: all 0.1s linear;
+}
+.btn_register:hover {
+    background-color: rgb(73, 73, 73);
+}
+.form_register {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.error {
+    margin-top: 20px;
+}
+.input_name, .input_pas {
+    width: 240px;
+    height: 30px;
+    outline: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: none;
+}
+.label_name, .label_pas {
+    margin-bottom: 10px;
+}
+.label_pas {
+    margin-top: 50px;
+}
+.register_logo {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    font-size: 22px;
+    text-transform: uppercase;
+
+    transform: translate3d(-50px, 0, 0);
+}
+.login_logo {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    font-size: 22px;
+    text-transform: uppercase;
+
+    transform: translate3d(-20px, 0, 0);
+}
+.register_btn {
+    margin-top: 50px;
+    padding: 10px 40px;
+    border: 2px white solid;
+    outline: none;
+    border-radius: 7px;
+    color: rgb(209, 209, 209);
+    background-color: black;
+    
+    transition: all 0.1s linear;
+}
+.register_btn:hover {
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border: 2px rgb(53, 53, 53) solid;
+}
+.plus {
+    color: white;
+    display: flex;
+    justify-content: center;
+    border: 1px rgb(54, 54, 54) dashed;
+    padding: 40px 0;
+    border-radius: 7px;
+    cursor: pointer;
+
+    transition: all 0.1s linear;
+}
+.plus:hover {
+    border: 1px rgb(119, 119, 119) dashed;
+    color: rgb(119, 119, 119);
+}
+.add_task {
+    margin: 0 120px;
+}
+.area {
+    padding: 5px 120px 50px 15px;
+    border-radius: 7px;
+    outline: none;
+    border: none;
+}
+.trash_can {
+    position: absolute;
+    width: 20px;
+    height: auto;
+    color: rgb(145, 145, 145);
+    top: 10px;
+    right: 15px;
+    z-index: 5;
+
+    opacity: 0;
+}
+.trash_can:hover {
+    color: white;
+}
+.add_view {
+    position: absolute;
+    width: 20px;
+    height: auto;
+    color: rgb(145, 145, 145);
+    top: 10px;
+    right: 15px;
+    z-index: 5;
+
+    opacity: 0;
+}
+.add_view:hover {
+    color: white;
+}
+.edit {
+    position: absolute;
+    width: 20px;
+    height: auto;
+    color: rgb(145, 145, 145);
+    top: 10px;
+    right: 45px;
+    z-index: 5;
+
+    opacity: 0;
+}
+.edit2 {
+    position: absolute;
+    width: 20px;
+    height: auto;
+    color: rgb(145, 145, 145);
+    top: 10px;
+    right: 15px;
+    z-index: 5;
+
+    opacity: 0;
+}
+.edit:hover {
+    color: white;
+}
+.view_plus {
+    position: absolute;
+    top: 13px;
+    right: 140px;
+    z-index: 1;
+    cursor: pointer;
+
+    opacity: 0;
+}
+.view_input {
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+}
+.view_btn {
+    margin-left: 10px;
+    padding: 3.5px 10px;
+    border: 2px white solid;
+    outline: none;
+    border-radius: 7px;
+
+    transition: all 0.1s linear;
+}
+.view_btn:hover {
+    cursor: pointer;
+    border-color: rgb(87, 87, 87);
+    background-color: rgb(87, 87, 87);
+    color: white;
+}
+.header_input {
+    padding: 5px 80px 5px 10px;
+    border-radius: 5px;
+    border: 2px white solid;
+    outline: none;
+    background-color: black;
+    color: white;
+}
+.viewPage {
+    padding: 50px 120px 0 120px;
+}
+.welcome {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.sub_logo {
+    margin: 10px 0;
+}
+.has_acc {
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+}
